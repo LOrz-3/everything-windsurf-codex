@@ -32,6 +32,21 @@ En bref :
 - **Codex MCP** : agent d'exécution léger délégué par Cascade pour les petites tâches.
 - **Codex CLI fallback** : agent d'exécution délégué par Cascade pour les tâches longues, les analyses à grande échelle, le fallback réseau, l'exécution par lots et les logs vérifiables.
 
+## Abstraction de plus haut niveau : non liée à Windsurf ni à Codex
+
+Il est utile de préciser que l'idée centrale d'EWC n'est pas liée à Windsurf, et qu'elle n'est pas liée à Codex non plus.
+
+Ce dépôt utilise Windsurf / Cascade + Codex MCP / Codex CLI fallback comme implémentation de référence déjà validée, parce que c'est la combinaison d'outils que l'auteur utilise actuellement et qu'il a vérifiée en pratique.
+
+À un niveau d'abstraction plus élevé, EWC se comprend mieux comme un modèle portable d'orchestration multi-agent pour l'AI coding :
+
+- **Frontend AI coding harness** : responsable de l'interaction avec l'utilisateur, du découpage des tâches, du contrôle des permissions, de la relecture des résultats et de la livraison finale.
+- **Backend CLI-capable agent** : responsable des tâches longues, des analyses à grande échelle, de l'exécution par lots, du fallback réseau et de la sortie des logs.
+- **Périmètre d'autorisation explicite** : toute écriture doit être limitée à des fichiers ou répertoires précis.
+- **Chaîne de logs vérifiable** : l'exécution backend doit laisser un prompt, un log et un résultat final afin que l'outil frontend et l'utilisateur puissent les relire.
+
+Autrement dit, dès qu'une autre combinaison d'outils respecte ces mêmes limites, la méthode de collaboration EWC peut aussi y être transférée. Codex n'est qu'un des exemples d'exécution actuellement validés, et Windsurf / Cascade n'est qu'un des exemples de frontend harness actuellement validés.
+
 ## Pourquoi EWC
 
 Beaucoup d'utilisateurs apprécient Windsurf parce que l'IDE, le panneau de chat, l'aperçu des fichiers et le rythme d'interaction restent au même endroit.

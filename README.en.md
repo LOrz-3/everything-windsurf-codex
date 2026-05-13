@@ -32,6 +32,21 @@ In short:
 - **Codex MCP**: a lightweight execution agent delegated by Cascade for small tasks.
 - **Codex CLI fallback**: a delegated execution agent used by Cascade for long-running tasks, large scans, network fallback, batch execution, and reviewable logs.
 
+## Higher-level abstraction: not tied to Windsurf or Codex
+
+It is worth clarifying that EWC's core idea is not tied to Windsurf, and it is not tied to Codex either.
+
+This repository uses Windsurf / Cascade + Codex MCP / Codex CLI fallback as a validated reference implementation because that is the tool combination the author currently uses and has tested in practice.
+
+At a higher level of abstraction, EWC is better understood as a portable multi-agent AI coding orchestration pattern:
+
+- **Frontend AI coding harness**: responsible for user interaction, task breakdown, permission control, result review, and final delivery.
+- **Backend CLI-capable agent**: responsible for long-running tasks, large scans, batch execution, network fallback, and log output.
+- **Explicit authorization scope**: all writes must be limited to specific files or directories.
+- **Reviewable log chain**: backend execution should leave a prompt, log, and final result for later review by the frontend tool and the user.
+
+So as long as another tool combination can satisfy those same boundaries, the EWC collaboration method can be migrated there as well. Codex is only one of the currently validated execution examples, and Windsurf / Cascade is only one of the currently validated frontend harness examples.
+
 ## Why EWC
 
 Many users like Windsurf because the IDE, chat panel, file preview, and interaction flow all stay in one place.
