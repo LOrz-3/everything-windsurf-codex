@@ -1,7 +1,7 @@
 # Everything-Windsurf-Codex / EWC
 
 <p align="center">
-  <strong>面向 Windsurf 用户的 Cascade + Codex MCP/CLI fallback 协作工作流系统</strong>
+  <strong>一种以 Windsurf / Cascade 为主入口、Codex 为后台执行 Agent 的多 Agent 协作工作流系统</strong>
 </p>
 
 <p align="center">
@@ -13,17 +13,19 @@
 
 ## 项目简介
 
-EWC 是一个轻量协作工作流系统，适合希望继续使用 Windsurf 作为主要 IDE 和聊天入口，同时又想把长任务、重任务、批量任务或需要完整日志的任务交给 Codex 处理的用户。
+Everything-Windsurf-Codex / EWC 是一种轻量级多 Agent 协作方式，而不是“在 Windsurf 里用 Codex 替代 Cascade”的插件方案。
+
+它的核心特色是：用户仍然在 Windsurf 中工作，Cascade 继续负责理解需求、拆分任务、选择通道、限制权限、审查结果和最终交付；Codex MCP / Codex CLI fallback 则作为被调度的执行型 Agent，处理短小探查、长任务、大范围扫描、批量执行、网络兜底和可复核日志。
 
 如果这个项目对您产生了任何帮助，请点击 Star 鼓励我喵。
 
 简单说：
 
-- **Windsurf / Cascade**：主工作台、调度者、审查者、最终交付者。
-- **Codex MCP**：短小轻量任务的快速副代理。
-- **Codex CLI fallback**：长任务、大范围扫描、网络兜底、批量执行和可复核日志链条。
+- **Windsurf / Cascade**：面向用户的主入口、调度者、审查者、最终交付者。
+- **Codex MCP**：被 Cascade 调度的轻量执行 Agent，适合短小任务。
+- **Codex CLI fallback**：被 Cascade 调度的后台执行 Agent，适合长任务、大范围扫描、网络兜底、批量执行和可复核日志链条。
 
-EWC is a lightweight collaboration workflow system for Windsurf users who want to keep Windsurf as the main working interface while delegating heavy, long-running, or log-sensitive tasks to Codex MCP or Codex CLI fallback.
+EWC is a lightweight multi-agent collaboration workflow. Windsurf / Cascade remains the main user-facing workspace, dispatcher, reviewer, and final delivery surface, while Codex MCP and Codex CLI fallback act as delegated execution agents for lightweight probes, long-running tasks, network fallback, batch execution, and reviewable logs.
 
 ## 为什么需要 EWC
 
@@ -38,7 +40,7 @@ EWC is a lightweight collaboration workflow system for Windsurf users who want t
 - MCP 等待时间长、没有进度反馈。
 - Windsurf / Cascade 直连读取 GitHub 或其他境外资料不稳定。
 
-EWC 的做法不是替代 Windsurf，而是让用户继续留在 Windsurf 中工作，把耗时、重复、需要日志或网络兜底的任务交给 Codex 在后台完成。
+EWC 的做法不是替代 Windsurf，也不是绕开 Cascade，而是让用户继续留在 Windsurf 中工作，由 Cascade 调度不同执行 Agent，把耗时、重复、需要日志或网络兜底的任务交给 Codex 在后台完成。
 
 ## 核心协作模式
 
