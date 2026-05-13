@@ -11,6 +11,13 @@
   <img alt="Validation" src="https://img.shields.io/badge/Validation-PASS-brightgreen.svg">
 </p>
 
+<p align="center">
+  <strong>简体中文</strong> |
+  <a href="./README.en.md">English</a> |
+  <a href="./README.es-MX.md">Español (México)</a> |
+  <a href="./README.fr.md">Français</a>
+</p>
+
 ## 项目简介
 
 Everything-Windsurf-Codex / EWC 是一种轻量级多 Agent 协作方式，而不是“在 Windsurf 里用 Codex 替代 Cascade”的插件方案。
@@ -129,6 +136,9 @@ CLI fallback 的关键价值是可复核。一次标准执行至少应保留：
 ```text
 .
  README.md
+ README.en.md
+ README.es-MX.md
+ README.fr.md
  LICENSE
  NOTICE.md
  .gitignore

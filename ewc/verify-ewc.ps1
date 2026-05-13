@@ -126,6 +126,9 @@ function Test-Phrases {
 }
 
 $RootReadme = Join-Path $ProjectRoot 'README.md'
+$EnglishReadme = Join-Path $ProjectRoot 'README.en.md'
+$SpanishMexicoReadme = Join-Path $ProjectRoot 'README.es-MX.md'
+$FrenchReadme = Join-Path $ProjectRoot 'README.fr.md'
 $License = Join-Path $ProjectRoot 'LICENSE'
 $Notice = Join-Path $ProjectRoot 'NOTICE.md'
 $Gitignore = Join-Path $ProjectRoot '.gitignore'
@@ -139,6 +142,9 @@ $McpExample = Join-Path $ProjectRoot 'examples\mcp_config.codex.json'
 
 $CriticalFiles = @(
     @{ Path = $RootReadme; Name = 'root README' },
+    @{ Path = $EnglishReadme; Name = 'English README' },
+    @{ Path = $SpanishMexicoReadme; Name = 'Spanish Mexico README' },
+    @{ Path = $FrenchReadme; Name = 'French README' },
     @{ Path = $License; Name = 'LICENSE' },
     @{ Path = $Notice; Name = 'NOTICE' },
     @{ Path = $Gitignore; Name = '.gitignore' },
@@ -186,6 +192,51 @@ if (Test-Path -LiteralPath $RootReadme -PathType Leaf) {
         '.log',
         '.last.md',
         'everything-claude-code'
+    )
+}
+
+if (Test-Path -LiteralPath $EnglishReadme -PathType Leaf) {
+    Test-Phrases -Path $EnglishReadme -Name 'English README phrases' -Phrases @(
+        'Everything-Windsurf-Codex',
+        'Windsurf / Cascade',
+        'Codex MCP',
+        'Codex CLI fallback',
+        'delegated execution agent',
+        'non-invasive',
+        'zero-dependency',
+        'split-network',
+        'workspace-write',
+        'secrets'
+    )
+}
+
+if (Test-Path -LiteralPath $SpanishMexicoReadme -PathType Leaf) {
+    Test-Phrases -Path $SpanishMexicoReadme -Name 'Spanish Mexico README phrases' -Phrases @(
+        'Everything-Windsurf-Codex',
+        'Windsurf / Cascade',
+        'Codex MCP',
+        'Codex CLI fallback',
+        'agente de ejecuci',
+        'no invasivo',
+        'sin dependencias',
+        'red dividida',
+        'workspace-write',
+        'secrets'
+    )
+}
+
+if (Test-Path -LiteralPath $FrenchReadme -PathType Leaf) {
+    Test-Phrases -Path $FrenchReadme -Name 'French README phrases' -Phrases @(
+        'Everything-Windsurf-Codex',
+        'Windsurf / Cascade',
+        'Codex MCP',
+        'Codex CLI fallback',
+        "agent d'ex",
+        'non intrusif',
+        'aucun service',
+        'split-network',
+        'workspace-write',
+        'secrets'
     )
 }
 
@@ -248,7 +299,7 @@ if (Test-Path -LiteralPath $CodexCollab -PathType Leaf) {
     )
 }
 
-foreach ($target in @($RootReadme, $License, $Notice, $Gitignore, $CoreReadme, $Verify, $Workflow, $MaintenanceSkill, $DelegationSkill, $CodexCollab, $McpExample)) {
+foreach ($target in @($RootReadme, $EnglishReadme, $SpanishMexicoReadme, $FrenchReadme, $License, $Notice, $Gitignore, $CoreReadme, $Verify, $Workflow, $MaintenanceSkill, $DelegationSkill, $CodexCollab, $McpExample)) {
     if (Test-Path -LiteralPath $target -PathType Leaf) {
         Test-NoBom -Path $target -Name "encoding: $target"
     }
