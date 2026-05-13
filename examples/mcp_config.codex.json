@@ -1,0 +1,6 @@
+{
+  "codex": {
+    "command": "<path-to-codex-executable>",
+    "args": ["mcp-server"]
+  }
+}
