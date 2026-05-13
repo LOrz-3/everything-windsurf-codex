@@ -121,6 +121,26 @@ CLI fallback 的关键价值是可复核。一次标准执行至少应保留：
     mcp_config.codex.json
 ```
 
+## 食用方法
+
+最简单的使用方式不是先手动复制所有文件，而是直接在 Windsurf 中和 AI 对话，把这个项目链接发给它，让它先学习 EWC 的协作方式。
+
+你可以在 Windsurf / Cascade 中这样说：
+
+```text
+请阅读并学习这个项目的协作方式：
+https://github.com/LOrz-3/everything-windsurf-codex
+
+之后请按 EWC 的方式和我协作：
+1. Windsurf / Cascade 保持主入口、调度者、审查者和最终交付者。
+2. Codex MCP 只用于短小轻量任务。
+3. 长任务、大范围扫描、批量执行、网络兜底或需要完整日志的任务，请使用 Codex CLI fallback。
+4. Codex 写入文件前必须先明确授权范围。
+5. 任务完成后请说明执行通道、改动文件、验证结果和风险。
+```
+
+如果你的 AI 能访问 GitHub，它可以直接读取 README、workflow、skill 和贡献规则；如果访问 GitHub 不稳定，可以先 clone 本仓库，或者把关键文件复制到当前 Windsurf workspace 中再让 AI 阅读。
+
 ## 快速开始
 
 ### 1. 复制 workflow
