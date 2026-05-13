@@ -178,6 +178,20 @@ Result: PASS
 - 不适合把 Codex 当作无限制写入代理。
 - 不适合直接照搬到所有项目而不做本地路径和权限调整。
 
+## 贡献与维护
+
+欢迎通过 Issue 和 Pull Request 提出建议、修复问题或改进文档。
+
+本项目优先保持以下定位：Windsurf 作为主入口，Cascade 负责调度与审查，Codex MCP/CLI fallback 负责受控执行。涉及项目核心定位、权限边界、日志策略和安全规则的修改，需要经过充分讨论和验证。
+
+如果你长期稳定贡献，并理解本项目的安全边界和维护原则，可以联系项目作者讨论协作维护方式。
+
+参与前建议阅读：
+
+- [贡献指南](CONTRIBUTING.md)
+- [行为准则](CODE_OF_CONDUCT.md)
+- [安全策略](SECURITY.md)
+
 ## 建议 GitHub Topics
 
 如果你在 GitHub 上发布本项目，建议添加：
