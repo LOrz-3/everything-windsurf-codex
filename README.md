@@ -197,6 +197,8 @@ EWC 受公开项目 [`everything-claude-code`](https://github.com/affaan-m/every
 
 感谢 `everything-claude-code` 项目对跨 AI coding harness 工作流、共享规则、技能沉淀和工具适配模式的探索。EWC 借鉴的是这类共享协作口径 + 不同工具适配的思想，并面向 Windsurf + Cascade + Codex MCP/CLI fallback 场景做了独立整理。
 
+特别感谢 [@why41bg](https://github.com/why41bg) 对本项目探索过程的支持，以及让我有机会体验和验证 Codex GPT-5.4 工作流。
+
 This project is an independent Windsurf + Cascade + Codex MCP/CLI fallback workflow system. It is not affiliated with, endorsed by, or maintained by the original ECC authors.
 
 If you copy or redistribute third-party code, scripts, templates, or documentation, keep the corresponding copyright notices and license texts.
