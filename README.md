@@ -51,18 +51,6 @@ EWC is a lightweight multi-agent collaboration workflow. Windsurf / Cascade rema
 
 因此，只要其他工具组合也能满足这些边界，EWC 的协作方法就可以迁移过去。Codex 只是当前验证样例之一，Windsurf / Cascade 也是当前验证的前台 harness 示例之一。
 
-## HAOP Console 静态原型
-
-本仓库也包含一个 **HAOP Console** 静态原型，用来展示未来如何管理多个后台 Agent、权限 Profile、委派模板、运行记录和可复核日志链条。
-
-需要特别强调：HAOP Console 不是日常编码工作台，也不替代 Windsurf / Cascade、Cursor、Claude Code、VS Code Agent 或其他前台 AI coding harness。日常工作仍然发生在前台 Agent 中；HAOP Console 只是一个伴随式管理界面，用来管理执行层。
-
-你可以从这里查看原型：
-
-```text
-prototype/haop-console.html
-```
-
 ## 为什么需要 EWC
 
 很多人喜欢 Windsurf 的原因很直接：IDE、聊天面板、文件预览和交互节奏都在一个地方，很顺手。
@@ -185,9 +173,6 @@ CLI fallback 的关键价值是可复核。一次标准执行至少应保留：
       SKILL.md
  examples/
     mcp_config.codex.json
- prototype/
-   README.md
-   haop-console.html
 ```
 
 ## 食用方法

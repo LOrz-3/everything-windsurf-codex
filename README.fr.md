@@ -49,18 +49,6 @@ Ce dépôt utilise Windsurf / Cascade + Codex MCP / Codex CLI fallback comme imp
 
 Autrement dit, dès qu'une autre combinaison d'outils respecte ces mêmes limites, la méthode de collaboration EWC peut aussi y être transférée. Codex n'est qu'un des exemples d'exécution actuellement validés, et Windsurf / Cascade n'est qu'un des exemples de frontend harness actuellement validés.
 
-## Prototype statique de HAOP Console
-
-Ce dépôt contient également un prototype statique de **HAOP Console**, qui montre comment plusieurs agents en arrière-plan, profils de permission, modèles de délégation, historique d'exécution et chaînes de logs vérifiables pourraient être gérés à l'avenir.
-
-Il est important de souligner que HAOP Console n'est pas un espace de travail quotidien pour coder. Il ne remplace pas Windsurf / Cascade, Cursor, Claude Code, VS Code Agent ni aucun autre foreground AI coding harness. Le travail quotidien reste dans l'agent de premier plan ; HAOP Console est seulement une interface de gestion compagnon pour la couche d'exécution.
-
-Vous pouvez consulter le prototype ici :
-
-```text
-prototype/haop-console.html
-```
-
 ## Pourquoi EWC
 
 Beaucoup d'utilisateurs apprécient Windsurf parce que l'IDE, le panneau de chat, l'aperçu des fichiers et le rythme d'interaction restent au même endroit.
@@ -183,9 +171,6 @@ Cela permet à l'utilisateur et à Cascade de relire :
       SKILL.md
  examples/
     mcp_config.codex.json
- prototype/
-   README.md
-   haop-console.html
 ```
 
 ## Mode d'emploi
