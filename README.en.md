@@ -32,9 +32,11 @@ In short:
 - **Codex MCP**: a lightweight execution agent delegated by Cascade for small tasks.
 - **Codex CLI fallback**: a delegated execution agent used by Cascade for long-running tasks, large scans, network fallback, batch execution, and reviewable logs.
 
-## Higher-level abstraction: not tied to Windsurf or Codex
+## Higher-level abstraction: the author calls it HAOP
 
 It is worth clarifying that EWC's core idea is not tied to Windsurf, and it is not tied to Codex either.
+
+To discuss this method more precisely, the author calls the higher-level abstraction behind EWC HAOP: Harness-Agent Orchestration Protocol. In this document, HAOP is a name introduced by the author to describe these collaboration boundaries; it does not imply an established industry standard.
 
 This repository uses Windsurf / Cascade + Codex MCP / Codex CLI fallback as a validated reference implementation because that is the tool combination the author currently uses and has tested in practice.
 
