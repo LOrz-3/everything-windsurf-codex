@@ -49,6 +49,18 @@ En un nivel más abstracto, EWC se entiende mejor como un patrón portable de or
 
 Así que, mientras otra combinación de herramientas respete esos mismos límites, el método de colaboración EWC también puede trasladarse a ella. Codex es solo uno de los ejemplos de ejecución validados actualmente, y Windsurf / Cascade es solo uno de los ejemplos de frontend harness validados actualmente.
 
+## Prototipo estático de HAOP Console
+
+Este repositorio también incluye un prototipo estático de **HAOP Console**, que muestra cómo podrían gestionarse en el futuro varios agentes en segundo plano, permission profiles, plantillas de delegación, historial de ejecuciones y cadenas de logs revisables.
+
+Es importante enfatizar que HAOP Console no es un espacio de trabajo diario para programar. No reemplaza a Windsurf / Cascade, Cursor, Claude Code, VS Code Agent ni a ningún otro foreground AI coding harness. El trabajo diario sigue ocurriendo en el agente en primer plano; HAOP Console es solo una interfaz de gestión acompañante para la capa de ejecución.
+
+Puedes ver el prototipo aquí:
+
+```text
+prototype/haop-console.html
+```
+
 ## Por qué EWC
 
 A muchas personas les gusta Windsurf porque el IDE, el panel de chat, la vista previa de archivos y el ritmo de interacción están en un solo lugar.
@@ -171,6 +183,9 @@ Esto permite que el usuario y Cascade revisen:
       SKILL.md
  examples/
     mcp_config.codex.json
+ prototype/
+   README.md
+   haop-console.html
 ```
 
 ## Cómo usarlo

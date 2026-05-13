@@ -139,6 +139,8 @@ $MaintenanceSkill = Join-Path $ProjectRoot 'skills\ewc-maintenance\SKILL.md'
 $DelegationSkill = Join-Path $ProjectRoot 'skills\codex-delegation\SKILL.md'
 $CodexCollab = Join-Path $ProjectRoot 'global_workflows\codex-collab.md'
 $McpExample = Join-Path $ProjectRoot 'examples\mcp_config.codex.json'
+$PrototypeReadme = Join-Path $ProjectRoot 'prototype\README.md'
+$HaopConsolePrototype = Join-Path $ProjectRoot 'prototype\haop-console.html'
 
 $CriticalFiles = @(
     @{ Path = $RootReadme; Name = 'root README' },
@@ -154,7 +156,9 @@ $CriticalFiles = @(
     @{ Path = $MaintenanceSkill; Name = 'EWC maintenance skill' },
     @{ Path = $DelegationSkill; Name = 'codex-delegation skill' },
     @{ Path = $CodexCollab; Name = 'codex-collab workflow' },
-    @{ Path = $McpExample; Name = 'MCP config example' }
+    @{ Path = $McpExample; Name = 'MCP config example' },
+    @{ Path = $PrototypeReadme; Name = 'HAOP Console prototype README' },
+    @{ Path = $HaopConsolePrototype; Name = 'HAOP Console prototype page' }
 )
 
 foreach ($file in $CriticalFiles) {
@@ -316,7 +320,39 @@ if (Test-Path -LiteralPath $CodexCollab -PathType Leaf) {
     )
 }
 
-foreach ($target in @($RootReadme, $EnglishReadme, $SpanishMexicoReadme, $FrenchReadme, $License, $Notice, $Gitignore, $CoreReadme, $Verify, $Workflow, $MaintenanceSkill, $DelegationSkill, $CodexCollab, $McpExample)) {
+if (Test-Path -LiteralPath $PrototypeReadme -PathType Leaf) {
+    Test-Phrases -Path $PrototypeReadme -Name 'HAOP Console prototype README phrases' -Phrases @(
+        'HAOP Console',
+        'foreground AI coding harness',
+        'companion',
+        'python -m http.server 8080',
+        'haop-console.html',
+        'shell',
+        'network',
+        'secrets'
+    )
+}
+
+if (Test-Path -LiteralPath $HaopConsolePrototype -PathType Leaf) {
+    Test-Phrases -Path $HaopConsolePrototype -Name 'HAOP Console prototype page phrases' -Phrases @(
+        'HAOP Console',
+        'Companion Console',
+        'Daily work stays in the foreground AI coding harness',
+        'Agent Registry',
+        'Permission Profiles',
+        'Delegation Template Builder',
+        'Run History',
+        'Log Viewer',
+        'Capability Matrix',
+        'Copy delegation prompt',
+        'Generate CLI fallback command',
+        'danger-full-access',
+        'Secrets blocked',
+        'author-named HAOP pattern'
+    )
+}
+
+foreach ($target in @($RootReadme, $EnglishReadme, $SpanishMexicoReadme, $FrenchReadme, $License, $Notice, $Gitignore, $CoreReadme, $Verify, $Workflow, $MaintenanceSkill, $DelegationSkill, $CodexCollab, $McpExample, $PrototypeReadme, $HaopConsolePrototype)) {
     if (Test-Path -LiteralPath $target -PathType Leaf) {
         Test-NoBom -Path $target -Name "encoding: $target"
     }
